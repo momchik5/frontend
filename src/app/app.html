@@ -10,4 +10,20 @@
     </div>
   </section>
 
+  <!-- Раздел v2.0 -->
+  <section class="section">
+    <h3>2. Запрос данных с сервера (v2.0)</h3>
+    <div class="form-group">
+      <button (click)="fetchData()" class="btn btn-secondary">Прочитать из файла</button>
+    </div>
+    <div class="form-group" style="margin-top: 12px;">
+   <textarea 
+        [(ngModel)]="resultText" 
+        readonly 
+        rows="5" 
+        placeholder="Содержимое data.txt появится здесь..." 
+        class="input-readonly textarea-content">
+      </textarea>
+    </div>
+  </section>
 </div>

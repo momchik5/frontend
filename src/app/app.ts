@@ -12,10 +12,11 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent {
   inputText: string = '';
   resultText: string = '';
-  private apiUrl = 'http://localhost:5177/api/data';
+  private apiUrl = 'http://localhost:5177/api/data'; 
 
   constructor(private http: HttpClient) {}
 
+  // v1.0 — Отправка данных на бэкенд
   sendData() {
     if (!this.inputText.trim()) {
       alert('Пожалуйста, введите текст!');
@@ -27,6 +28,7 @@ export class AppComponent {
     });
   }
 
+  // v2.0 — Чтение данных с бэкенда
   fetchData() {
     this.http.get<{ text: string }>(this.apiUrl).subscribe({
       next: (res) => this.resultText = res.text,
