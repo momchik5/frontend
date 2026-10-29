@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent {
   inputText: string = '';
   resultText: string = '';
-  private apiUrl = 'http://localhost:5177/api/data'; 
+  private apiUrl = '/api/data'; 
 
   constructor(private http: HttpClient) {}
 
